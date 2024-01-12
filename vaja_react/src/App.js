@@ -1,16 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
 
 function Neke(){
+  const[tekst, setText]=useState(false);
+
   return (
     <>
     <div>
       <p>
         Neki text druge funkcije
       </p>
-      Neki drugi text
+      <button onClick={(e)=>{setText(!tekst)}}>klikni me</button>
     </div>
-    <span>nekaj</span>
+    <span>{tekst? "prvi tekst": "drugi tekst"}</span>
     </>
   )
 }
